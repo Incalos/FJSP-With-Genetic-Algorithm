@@ -1,6 +1,6 @@
 # Flexible Job-shop Scheduling Problem With Genetic Algorithm
 
-Using genetic algorithm to solve the dynamic scheduling problem of flexible Job Shop production
+This project involves using Genetic Algorithm to solve the dynamic scheduling problem of flexible Job Shop production.
 
 ## Prepare configuration file
 
@@ -11,12 +11,12 @@ Using genetic algorithm to solve the dynamic scheduling problem of flexible Job 
     * ''9999'' indicates that the corresponding machine processing cannot be selected in the process. 
     * _For example:_
 
-|  10   |   9   |   0    |   0    |   0    |   0    |   0    |   0   |   0    |   0    |   0    |   0    |
-|:-----:|:-----:|:------:|:------:|:------:|:------:|:------:|:-----:|:------:|:------:|:------:|:------:|
-| **0** | **0** | **14** | **16** | **0**  | **0**  | **0**  | **0** | **0**  | **0**  | **0**  | **0**  |
-| **0** | **0** | **0**  | **0**  | **15** | **25** | **21** | **0** | **0**  | **0**  | **0**  | **0**  |
-| **0** | **0** | **0**  | **0**  | **0**  | **0**  | **0**  | **9** | **13** | **25** | **24** | **0**  |
-| **0** | **0** | **0**  | **0**  | **0**  | **0**  | **0**  | **0** | **0**  | **0**  | **0**  | **10** |
+      |  10   |   9   |   0    |   0    |   0    |   0    |   0    |   0   |   0    |   0    |   0    |   0    |
+      |:-----:|:-----:|:------:|:------:|:------:|:------:|:------:|:-----:|:------:|:------:|:------:|:------:|
+      | **0** | **0** | **14** | **16** | **0**  | **0**  | **0**  | **0** | **0**  | **0**  | **0**  | **0**  |
+      | **0** | **0** | **0**  | **0**  | **15** | **25** | **21** | **0** | **0**  | **0**  | **0**  | **0**  |
+      | **0** | **0** | **0**  | **0**  | **0**  | **0**  | **0**  | **9** | **13** | **25** | **24** | **0**  |
+      | **0** | **0** | **0**  | **0**  | **0**  | **0**  | **0**  | **0** | **0**  | **0**  | **0**  | **10** |
 
 ```python
 
