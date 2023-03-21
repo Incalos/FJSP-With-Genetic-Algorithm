@@ -4,11 +4,10 @@ This project involves using Genetic Algorithm to solve the dynamic scheduling pr
 
 ## Prepare configuration file
 
-* **Processing_time** : Processing schedule.
+* **Processing_time** : `the processing schedule of this production process`
     * The horizontal axis index represents the process sequence number, the vertical axis represents the processing
-      machine
-      sequence number, and the numerical value represents the corresponding processing time.
-    * ''9999'' indicates that the corresponding machine processing cannot be selected in the process. 
+      machine sequence number, and the numerical value represents the corresponding processing time.
+    * ''9999'' indicates that the corresponding machine cannot be selected in the process. 
     * _For example:_
 
       |  10   |   9   |   0    |   0    |   0    |   0    |   0    |   0   |   0    |   0    |   0    |   0    |
