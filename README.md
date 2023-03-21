@@ -17,23 +17,23 @@ This project involves using Genetic Algorithm to solve the dynamic scheduling pr
       | **0** | **0** | **0**  | **0**  | **0**  | **0**  | **0**  | **9** | **13** | **25** | **24** | **0**  |
       | **0** | **0** | **0**  | **0**  | **0**  | **0**  | **0**  | **0** | **0**  | **0**  | **0**  | **10** |
 
-```python
+      ```python
 
-Processing_time = [[10, 9, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999],
-                   [9999, 9999, 14, 16, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999],
-                   [9999, 9999, 9999, 9999, 15, 25, 21, 9999, 9999, 9999, 9999, 9999],
-                   [9999, 9999, 9999, 9999, 9999, 9999, 9999, 9, 13, 15, 24, 9999],
-                   [9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 10]]
-```
+      Processing_time = [[10, 9, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999],
+                         [9999, 9999, 14, 16, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999],
+                         [9999, 9999, 9999, 9999, 15, 25, 21, 9999, 9999, 9999, 9999, 9999],
+                         [9999, 9999, 9999, 9999, 9999, 9999, 9999, 9, 13, 15, 24, 9999],
+                         [9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 10]]
+      ```
 
-* **J** : Workpiece number and corresponding process quantity of each workpiece.
+* **J** : `workpiece number and corresponding operation number of each workpiece`
     * Represented in dictionary format
 
-* **M_num** :  Number of processing machines.
+* **M_num** :  `number of machines`
 
-* **O_num** :  Total number of operations for all workpieces.
+* **O_num** :  `number of operations for all workpieces`
 
-* **J_num** :  Total number of workpieces.
+* **J_num** :  `number of workpieces`
 
 ## Set parameters of genetic algorithm
 
