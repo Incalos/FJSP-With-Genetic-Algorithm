@@ -8,7 +8,7 @@ This project involves using Genetic Algorithm to solve the dynamic scheduling pr
     * The horizontal axis index represents the process sequence number, the vertical axis represents the processing
       machine sequence number, and the numerical value represents the corresponding processing time.
     * ''9999'' indicates that the corresponding machine cannot be selected in the process. 
-    * _For example:_
+    * For example:
 
       |  10   |   9   |   0    |   0    |   0    |   0    |   0    |   0   |   0    |   0    |   0    |   0    |
       |:-----:|:-----:|:------:|:------:|:------:|:------:|:------:|:-----:|:------:|:------:|:------:|:------:|
@@ -27,7 +27,7 @@ This project involves using Genetic Algorithm to solve the dynamic scheduling pr
       ```
 
 * **J** : `workpiece number and corresponding operation number of each workpiece`
-    * Represented in dictionary format
+    * represented in dictionary format
 
 * **M_num** :  `number of machines`
 
@@ -50,12 +50,12 @@ class GA():
         self.Max_Itertions = 100
 ```
 
-## Display of operation results
+## Display of the results
 
-* Gantt Chart
+* processing schedule showed in gantt chart
 
 ![](picture/img_1.png)
 
-* The maximum completion time of each iteration
+* the maximum completion time of each iteration
 
 ![](picture/img_2.png)
