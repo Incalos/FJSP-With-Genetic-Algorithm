@@ -26,7 +26,7 @@ This project involves using Genetic Algorithm to solve the dynamic scheduling pr
                          [9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 9999, 10]]
       ```
 
-* **J** : `workpiece number and corresponding operation number of each workpiece. It is represented in dictionary format`
+* **J** : `workpiece number and corresponding operation number of each workpiece`
 
 * **M_num** :  `number of machines`
 
