@@ -25,9 +25,13 @@ class GA():
         return Fit
 
     # 机器部分交叉
-    # CHS：基因
-    # T0：工序总数
     def machine_cross(self, CHS1, CHS2, T0):
+        """
+        :param CHS1: 机器选择部分的基因1
+        :param CHS2: 机器选择部分的基因2
+        :param T0: 工序总数
+        :return: 交叉后的机器选择部分的基因
+        """
         T_r = [j for j in range(T0)]
         r = random.randint(1, 10)  # 在区间[1,T0]内产生一个整数r
         random.shuffle(T_r)
@@ -44,10 +48,14 @@ class GA():
         return CHS1, CHS2
 
     # 工序部分交叉
-    # CHS：基因
-    # T0：工序总数
-    # J_num：工件总数
     def operation_cross(self, CHS1, CHS2, T0, J_num):
+        """
+        :param CHS1: 工序选择部分的基因1
+        :param CHS2: 工序选择部分的基因2
+        :param T0: 工序总数
+        :param J_num: 工件总数
+        :return: 交叉后的工序选择部分的基因
+        """
         OS_1 = CHS1[T0:2 * T0]
         OS_2 = CHS2[T0:2 * T0]
         MS_1 = CHS1[0:T0]
@@ -56,7 +64,6 @@ class GA():
         random.shuffle(Job_list)
         r = random.randint(1, J_num - 1)
         Set1 = Job_list[0:r]
-        Set2 = Job_list[r:J_num]
         new_os = list(np.zeros(T0, dtype=int))
         for k, v in enumerate(OS_1):
             if v in Set1:
@@ -71,11 +78,14 @@ class GA():
         return CHS1, CHS2
 
     # 机器部分变异
-    # CHS：基因
-    # O：加工时间矩阵
-    # T0：工序总数
-    # J：各工件加工信息
     def machine_variation(self, CHS, O, T0, J):
+        """
+        :param CHS: 机器选择部分的基因
+        :param O: 加工时间矩阵
+        :param T0: 工序总数
+        :param J: 各工件加工信息
+        :return: 变异后的机器选择部分的基因
+        """
         Tr = [i_num for i_num in range(T0)]
         MS = CHS[0:T0]
         OS = CHS[T0:2 * T0]
@@ -106,13 +116,16 @@ class GA():
         return CHS
 
     # 工序部分变异
-    # CHS：基因
-    # T0：工序总数
-    # J_num：工件总数
-    # J_：各工件加工信息
-    # O：加工时间矩阵
-    # M_num：机器总数
     def operation_variation(self, CHS, T0, J_num, J, O, M_num):
+        """
+        :param CHS: 工序选择部分的基因
+        :param T0: 工序总数
+        :param J_num: 工件总数
+        :param J: 各工件加工信息
+        :param O: 加工时间矩阵
+        :param M_num: 机器总数
+        :return: 变异后的工序选择部分的基因
+        """
         MS = CHS[0:T0]
         OS = list(CHS[T0:2 * T0])
         r = random.randint(1, J_num - 1)

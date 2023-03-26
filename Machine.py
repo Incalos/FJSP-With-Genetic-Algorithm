@@ -1,6 +1,9 @@
 class Machine_Time_window:
     def __init__(self, Machine_index):
-        self.Machine_index = Machine_index  # 加工机器序号
+        """
+        :param Machine_index: 加工机器序号
+        """
+        self.Machine_index = Machine_index
         self.assigned_task = []  # 机器分配的任务记录，包括工件序号以及工序序号
         self.O_start = []  # 各任务工序的开始时间记录
         self.O_end = []  # 各任务工序的结束时间记录
@@ -8,6 +11,9 @@ class Machine_Time_window:
 
     # 机器的哪些时间窗是空的,此处只考虑内部封闭的时间窗,类似甘特图每一行往后叠加
     def Empty_time_window(self):
+        """
+        :return: 空格时间的开始、结束、时长
+        """
         time_window_start = []
         time_window_end = []
         len_time_window = []
@@ -25,7 +31,7 @@ class Machine_Time_window:
             time_window_end.extend(self.O_start[1:])
         if time_window_end is not None:
             len_time_window = [time_window_end[i] - time_window_start[i] for i in range(len(time_window_end))]
-        return time_window_start, time_window_end, len_time_window  # 空格时间的开始，结束，时长
+        return time_window_start, time_window_end, len_time_window
 
     # 机器投入新一轮加工
     def _Input(self, Job, M_Ealiest, P_t, O_num):

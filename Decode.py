@@ -6,16 +6,21 @@ from Machine import Machine_Time_window
 
 class Decode:
     def __init__(self, J, Processing_time, M_num):
-        self.Processing_time = Processing_time  # 工件各工序对应各机器加工时间矩阵
-        self.Scheduled = []  # 已经排产过的工序
-        self.M_num = M_num  # 加工机器数
+        """
+        :param J: 各工件对应的工序数字典
+        :param Processing_time: 各工件的加工时间矩阵
+        :param M_num: 加工机器数
+        """
+        self.Processing_time = Processing_time
+        self.M_num = M_num
+        self.J = J
         self.Machines = []  # 存储机器类
-        self.fitness = 0
-        self.J = J  # 各工件对应的工序数字典
-        for j in range(M_num):
-            self.Machines.append(Machine_Time_window(j))
+        self.Scheduled = []  # 已经排产过的工序
+        self.fitness = 0  # 适应度
         self.Machine_State = np.zeros(M_num, dtype=int)  # 在机器上加工的工件是哪个
         self.Jobs = []  # 存储工件类
+        for j in range(M_num):
+            self.Machines.append(Machine_Time_window(j))
         for k, v in J.items():
             self.Jobs.append(Job(k, v))
 
@@ -75,8 +80,13 @@ class Decode:
         End_work_time = M_Ealiest + P_t  # 当前工件当前工序的结束时间
         return M_Ealiest, Selected_Machine, P_t, O_num, last_O_end, End_work_time
 
-    # 解码
-    def decode(self, CHS, Len_Chromo):  # CHS：种群基因  Len_Chromo：MS与OS的分解线
+    # 解码操作
+    def decode(self, CHS, Len_Chromo):
+        """
+        :param CHS: 种群基因
+        :param Len_Chromo: MS与OS的分解线
+        :return: 适应度，即最大加工时间
+        """
         MS = list(CHS[0:Len_Chromo])
         OS = list(CHS[Len_Chromo:2 * Len_Chromo])
         Needed_Matrix = self.Order_Matrix(MS)
