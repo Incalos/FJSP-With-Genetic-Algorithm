@@ -32,8 +32,8 @@ O_num = 25
 The following is an introduction to variable names.
 
 * **Processing_time** : `the processing schedule of every workpiece written in the list format`
-  * _In the table, the row index represents the sequence number of the operation, the column index represents the sequence number of the machine, and the numerical value represents the corresponding processing time._
-  * _If a machine is not selected in the operation, the corresponding value is represented by **9999**._
+  * In the table, the row index represents the sequence number of the operation, the column index represents the sequence number of the machine, and the numerical value represents the corresponding processing time.
+  * If a machine is not selected in the operation, the corresponding value is represented by **9999**.
 * **J** : `the index of each workpiece and the total number of corresponding operations written in the dictionary format`
 * **J_num** : `the number of workpieces`
 * **M_num** : `the number of machines`
